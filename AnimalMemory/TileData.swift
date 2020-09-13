@@ -6,8 +6,8 @@
 //  Copyright © 2020 Steve Astels. All rights reserved.
 //
 
-import Foundation
 import AVFoundation
+import Foundation
 import SwiftUI
 
 struct TileData {
@@ -17,7 +17,7 @@ struct TileData {
   var soundDuration: Double?
   var image: String
   var audioPlayer: AVAudioPlayer?
-  
+
   init(title: String, color: Color, sound: String, image: String) {
     self.title = title
     self.color = color
@@ -27,15 +27,18 @@ struct TileData {
       let url = URL(fileURLWithPath: path)
       do {
         audioPlayer = try AVAudioPlayer(contentsOf: url)
-        self.soundDuration = audioPlayer?.duration
+        soundDuration = audioPlayer?.duration
       } catch {}
     }
   }
-  
+
   func playSound() {
-    print("playing \(sound) Duration: \(soundDuration!)")
-    audioPlayer?.stop()
-    audioPlayer?.play()
+    if let audioPlayer = audioPlayer {
+      print("playing \(sound) Duration: \(soundDuration!)")
+      audioPlayer.prepareToPlay()
+      audioPlayer.play()
+    } else {
+      print("No sound for \(sound)!")
+    }
   }
-  
 }
