@@ -7,23 +7,39 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct Tile: View {
-  var title: String
-  var backgroundColor: Color
+  var data: TileData
+  @State private var audioPlayer: AVAudioPlayer?
+
   var body: some View {
-    Text(title)
+    Button(action: {
+      print("Pressed \(self.data.image)")
+      if let path = Bundle.main.path(forResource: self.data.sound, ofType: ".mp3") {
+        let url = URL(fileURLWithPath: path)
+        do {
+          self.audioPlayer?.stop()
+          self.audioPlayer = try AVAudioPlayer(contentsOf: url)
+          self.audioPlayer?.play()
+        } catch {}
+      }
+      
+      
+    }) {
+      Image(data.image).resizable().scaledToFit()
       .frame(minWidth: 0,
              maxWidth: .infinity,
              minHeight: 0,
              maxHeight: .infinity,
              alignment: .center)
-      .background(backgroundColor)
+        .background(data.color)
+    }.buttonStyle(PlainButtonStyle())
   }
 }
 
 struct Tile_Previews: PreviewProvider {
   static var previews: some View {
-    Tile(title: "A", backgroundColor: Color.blue)
+    Tile(data: TileData(title: "A", color: .red, sound: "cat", image: "cat"))
   }
 }
