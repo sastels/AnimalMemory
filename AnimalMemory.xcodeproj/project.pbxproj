@@ -48,6 +48,7 @@
 		015CEC04250EA2ED000629A5 /* horse.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CEC03250EA2ED000629A5 /* horse.mp3 */; };
 		015CEC05250EA2ED000629A5 /* horse.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CEC03250EA2ED000629A5 /* horse.mp3 */; };
 		015CEC06250EA2ED000629A5 /* horse.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CEC03250EA2ED000629A5 /* horse.mp3 */; };
+		01DCBBE1250EACB5006C2F20 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DCBBE0250EACB5006C2F20 /* GameEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		015CEBFB250EA24E000629A5 /* dog.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dog.mp3; sourceTree = "<group>"; };
 		015CEBFF250EA287000629A5 /* cat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cat.mp3; sourceTree = "<group>"; };
 		015CEC03250EA2ED000629A5 /* horse.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = horse.mp3; sourceTree = "<group>"; };
+		01DCBBE0250EACB5006C2F20 /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				015CEBDA250E8F69000629A5 /* Board.swift */,
 				015CEBDE250E909A000629A5 /* Tile.swift */,
 				015CEBE2250E9C20000629A5 /* TileData.swift */,
+				01DCBBE0250EACB5006C2F20 /* GameEngine.swift */,
 			);
 			path = AnimalMemory;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			files = (
 				015CEBA9250E8DD2000629A5 /* AppDelegate.swift in Sources */,
 				015CEBE3250E9C20000629A5 /* TileData.swift in Sources */,
+				01DCBBE1250EACB5006C2F20 /* GameEngine.swift in Sources */,
 				015CEBAB250E8DD2000629A5 /* SceneDelegate.swift in Sources */,
 				015CEBDF250E909A000629A5 /* Tile.swift in Sources */,
 				015CEBDB250E8F69000629A5 /* Board.swift in Sources */,
