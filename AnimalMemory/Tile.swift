@@ -12,18 +12,21 @@ struct Tile: View {
   var title: String
   var backgroundColor: Color
   var body: some View {
-    Text(title)
+    Button(action: { print("Pressed \(self.title)") }) {
+      Text(self.title).foregroundColor(.black)
       .frame(minWidth: 0,
              maxWidth: .infinity,
              minHeight: 0,
              maxHeight: .infinity,
              alignment: .center)
       .background(backgroundColor)
+
+    }
   }
 }
 
 struct Tile_Previews: PreviewProvider {
   static var previews: some View {
-    Tile(title: "A", backgroundColor: Color.blue)
+    Tile(title: "A", backgroundColor: .red)
   }
 }

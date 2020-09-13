@@ -12,12 +12,12 @@ struct Board: View {
   var body: some View {
     VStack {
       HStack(spacing:0) {
-        Tile(title: "A", backgroundColor: Color.red)
-        Tile(title: "B", backgroundColor: Color.blue)
+        Tile(title: "A", backgroundColor: .red)
+        Tile(title: "B", backgroundColor: .blue)
       }
       HStack(spacing:0) {
-        Tile(title: "C", backgroundColor: Color.green)
-        Tile(title: "D", backgroundColor: Color.yellow)
+        Tile(title: "C", backgroundColor: .green)
+        Tile(title: "D", backgroundColor: .yellow)
       }
     }
   }
