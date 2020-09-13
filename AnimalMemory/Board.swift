@@ -9,23 +9,20 @@
 import SwiftUI
 
 struct Board: View {
-  let tiles = [
-    TileData(title: "A", color: .red, sound: "cat", image: "cat"),
-    TileData(title: "B", color: .purple, sound: "dog", image: "dog"),
-    TileData(title: "C", color: .green, sound: "cow", image: "cow"),
-    TileData(title: "D", color: .yellow, sound: "horse", image: "horse"),
-  ]
-  
+  @State var game = GameEngine()
+
   var body: some View {
     VStack {
       HStack(spacing:0) {
-        Tile(data: tiles[0])
-        Tile(data: tiles[1])
+        Tile(data: game.tiles[0])
+        Tile(data: game.tiles[1])
       }
       HStack(spacing:0) {
-        Tile(data: tiles[2])
-        Tile(data: tiles[3])
+        Tile(data: game.tiles[2])
+        Tile(data: game.tiles[3])
       }
+    }.onAppear() {
+      self.game.playSequence()
     }
   }
 }

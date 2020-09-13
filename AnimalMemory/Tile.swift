@@ -16,16 +16,7 @@ struct Tile: View {
   var body: some View {
     Button(action: {
       print("Pressed \(self.data.image)")
-      if let path = Bundle.main.path(forResource: self.data.sound, ofType: ".mp3") {
-        let url = URL(fileURLWithPath: path)
-        do {
-          self.audioPlayer?.stop()
-          self.audioPlayer = try AVAudioPlayer(contentsOf: url)
-          self.audioPlayer?.play()
-        } catch {}
-      }
-      
-      
+      self.data.playSound()
     }) {
       Image(data.image).resizable().scaledToFit()
       .frame(minWidth: 0,
