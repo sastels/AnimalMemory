@@ -15,7 +15,7 @@ struct Tile: View {
 
   var body: some View {
     Button(action: {
-      print("Pressed \(self.data.title)")
+      print("Pressed \(self.data.image)")
       if let path = Bundle.main.path(forResource: self.data.sound, ofType: ".mp3") {
         let url = URL(fileURLWithPath: path)
         do {
@@ -27,20 +27,19 @@ struct Tile: View {
       
       
     }) {
-      Text(self.data.title).foregroundColor(.black)
+      Image(data.image).resizable().scaledToFit()
       .frame(minWidth: 0,
              maxWidth: .infinity,
              minHeight: 0,
              maxHeight: .infinity,
              alignment: .center)
         .background(data.color)
-
-    }
+    }.buttonStyle(PlainButtonStyle())
   }
 }
 
 struct Tile_Previews: PreviewProvider {
   static var previews: some View {
-    Tile(data: TileData(title: "A", color: .red, sound: "Cat2"))
+    Tile(data: TileData(title: "A", color: .red, sound: "cat", image: "cat"))
   }
 }

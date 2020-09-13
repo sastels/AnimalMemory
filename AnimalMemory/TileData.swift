@@ -13,4 +13,5 @@ struct TileData {
   var title: String
   var color: Color
   var sound: String
+  var image: String
 }

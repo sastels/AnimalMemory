@@ -143,6 +143,7 @@
 		015CEBA7250E8DD2000629A5 /* AnimalMemory */ = {
 			isa = PBXGroup;
 			children = (
+				015CEC07250EA640000629A5 /* Images */,
 				015CEBE6250E9DC1000629A5 /* Sounds */,
 				015CEBA8250E8DD2000629A5 /* AppDelegate.swift */,
 				015CEBAA250E8DD2000629A5 /* SceneDelegate.swift */,
@@ -197,6 +198,13 @@
 				015CEBEA250E9E77000629A5 /* cathiss.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		015CEC07250EA640000629A5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
