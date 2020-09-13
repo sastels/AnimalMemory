@@ -22,7 +22,7 @@ struct Board: View {
         Tile(data: game.tiles[3])
       }
     }.onAppear() {
-      self.game.playSequence()
+//      self.game.playSequence()
     }
   }
 }

@@ -10,7 +10,16 @@ import SwiftUI
 
 struct ContentView: View {
   var body: some View {
-    Board()
+    VStack {
+      HStack {
+        Text("Animal Memory")
+        Spacer()
+        Button(action: {}) {
+          Text("Restart")
+        }
+      }.padding(10)
+      Board()
+    }
   }
 }
 
