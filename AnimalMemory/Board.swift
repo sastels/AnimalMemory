@@ -9,15 +9,22 @@
 import SwiftUI
 
 struct Board: View {
+  let tiles = [
+    TileData(title: "A", color: .red, sound: "Cat2"),
+    TileData(title: "B", color: .purple, sound: "catfight"),
+    TileData(title: "C", color: .green, sound: "catgrowl"),
+    TileData(title: "D", color: .yellow, sound: "cathiss"),
+  ]
+  
   var body: some View {
     VStack {
       HStack(spacing:0) {
-        Tile(title: "A", backgroundColor: .red)
-        Tile(title: "B", backgroundColor: .blue)
+        Tile(data: tiles[0])
+        Tile(data: tiles[1])
       }
       HStack(spacing:0) {
-        Tile(title: "C", backgroundColor: .green)
-        Tile(title: "D", backgroundColor: .yellow)
+        Tile(data: tiles[2])
+        Tile(data: tiles[3])
       }
     }
   }

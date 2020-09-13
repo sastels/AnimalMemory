@@ -21,6 +21,21 @@
 		015CEBDF250E909A000629A5 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015CEBDE250E909A000629A5 /* Tile.swift */; };
 		015CEBE0250E909A000629A5 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015CEBDE250E909A000629A5 /* Tile.swift */; };
 		015CEBE1250E909A000629A5 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015CEBDE250E909A000629A5 /* Tile.swift */; };
+		015CEBE3250E9C20000629A5 /* TileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015CEBE2250E9C20000629A5 /* TileData.swift */; };
+		015CEBE4250E9C20000629A5 /* TileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015CEBE2250E9C20000629A5 /* TileData.swift */; };
+		015CEBE5250E9C20000629A5 /* TileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015CEBE2250E9C20000629A5 /* TileData.swift */; };
+		015CEBEB250E9E77000629A5 /* Cat2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CEBE7250E9E77000629A5 /* Cat2.mp3 */; };
+		015CEBEC250E9E77000629A5 /* Cat2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CEBE7250E9E77000629A5 /* Cat2.mp3 */; };
+		015CEBED250E9E77000629A5 /* Cat2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CEBE7250E9E77000629A5 /* Cat2.mp3 */; };
+		015CEBEE250E9E77000629A5 /* catfight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CEBE8250E9E77000629A5 /* catfight.mp3 */; };
+		015CEBEF250E9E77000629A5 /* catfight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CEBE8250E9E77000629A5 /* catfight.mp3 */; };
+		015CEBF0250E9E77000629A5 /* catfight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CEBE8250E9E77000629A5 /* catfight.mp3 */; };
+		015CEBF1250E9E77000629A5 /* catgrowl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CEBE9250E9E77000629A5 /* catgrowl.mp3 */; };
+		015CEBF2250E9E77000629A5 /* catgrowl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CEBE9250E9E77000629A5 /* catgrowl.mp3 */; };
+		015CEBF3250E9E77000629A5 /* catgrowl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CEBE9250E9E77000629A5 /* catgrowl.mp3 */; };
+		015CEBF4250E9E77000629A5 /* cathiss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CEBEA250E9E77000629A5 /* cathiss.mp3 */; };
+		015CEBF5250E9E77000629A5 /* cathiss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CEBEA250E9E77000629A5 /* cathiss.mp3 */; };
+		015CEBF6250E9E77000629A5 /* cathiss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CEBEA250E9E77000629A5 /* cathiss.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +72,11 @@
 		015CEBCC250E8DD3000629A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		015CEBDA250E8F69000629A5 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		015CEBDE250E909A000629A5 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		015CEBE2250E9C20000629A5 /* TileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileData.swift; sourceTree = "<group>"; };
+		015CEBE7250E9E77000629A5 /* Cat2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cat2.mp3; sourceTree = "<group>"; };
+		015CEBE8250E9E77000629A5 /* catfight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = catfight.mp3; sourceTree = "<group>"; };
+		015CEBE9250E9E77000629A5 /* catgrowl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = catgrowl.mp3; sourceTree = "<group>"; };
+		015CEBEA250E9E77000629A5 /* cathiss.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cathiss.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +127,7 @@
 		015CEBA7250E8DD2000629A5 /* AnimalMemory */ = {
 			isa = PBXGroup;
 			children = (
+				015CEBE6250E9DC1000629A5 /* Sounds */,
 				015CEBA8250E8DD2000629A5 /* AppDelegate.swift */,
 				015CEBAA250E8DD2000629A5 /* SceneDelegate.swift */,
 				015CEBAC250E8DD2000629A5 /* ContentView.swift */,
@@ -116,6 +137,7 @@
 				015CEBB0250E8DD3000629A5 /* Preview Content */,
 				015CEBDA250E8F69000629A5 /* Board.swift */,
 				015CEBDE250E909A000629A5 /* Tile.swift */,
+				015CEBE2250E9C20000629A5 /* TileData.swift */,
 			);
 			path = AnimalMemory;
 			sourceTree = "<group>";
@@ -144,6 +166,17 @@
 				015CEBCC250E8DD3000629A5 /* Info.plist */,
 			);
 			path = AnimalMemoryUITests;
+			sourceTree = "<group>";
+		};
+		015CEBE6250E9DC1000629A5 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				015CEBE7250E9E77000629A5 /* Cat2.mp3 */,
+				015CEBE8250E9E77000629A5 /* catfight.mp3 */,
+				015CEBE9250E9E77000629A5 /* catgrowl.mp3 */,
+				015CEBEA250E9E77000629A5 /* cathiss.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +283,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015CEBEB250E9E77000629A5 /* Cat2.mp3 in Resources */,
 				015CEBB5250E8DD3000629A5 /* LaunchScreen.storyboard in Resources */,
+				015CEBEE250E9E77000629A5 /* catfight.mp3 in Resources */,
 				015CEBB2250E8DD3000629A5 /* Preview Assets.xcassets in Resources */,
+				015CEBF4250E9E77000629A5 /* cathiss.mp3 in Resources */,
 				015CEBAF250E8DD3000629A5 /* Assets.xcassets in Resources */,
+				015CEBF1250E9E77000629A5 /* catgrowl.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +297,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015CEBF5250E9E77000629A5 /* cathiss.mp3 in Resources */,
+				015CEBEF250E9E77000629A5 /* catfight.mp3 in Resources */,
+				015CEBEC250E9E77000629A5 /* Cat2.mp3 in Resources */,
+				015CEBF2250E9E77000629A5 /* catgrowl.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +308,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015CEBF6250E9E77000629A5 /* cathiss.mp3 in Resources */,
+				015CEBF0250E9E77000629A5 /* catfight.mp3 in Resources */,
+				015CEBED250E9E77000629A5 /* Cat2.mp3 in Resources */,
+				015CEBF3250E9E77000629A5 /* catgrowl.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				015CEBA9250E8DD2000629A5 /* AppDelegate.swift in Sources */,
+				015CEBE3250E9C20000629A5 /* TileData.swift in Sources */,
 				015CEBAB250E8DD2000629A5 /* SceneDelegate.swift in Sources */,
 				015CEBDF250E909A000629A5 /* Tile.swift in Sources */,
 				015CEBDB250E8F69000629A5 /* Board.swift in Sources */,
@@ -290,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				015CEBE0250E909A000629A5 /* Tile.swift in Sources */,
+				015CEBE4250E9C20000629A5 /* TileData.swift in Sources */,
 				015CEBDC250E8F6A000629A5 /* Board.swift in Sources */,
 				015CEBC0250E8DD3000629A5 /* AnimalMemoryTests.swift in Sources */,
 			);
@@ -300,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				015CEBE1250E909A000629A5 /* Tile.swift in Sources */,
+				015CEBE5250E9C20000629A5 /* TileData.swift in Sources */,
 				015CEBDD250E8F6A000629A5 /* Board.swift in Sources */,
 				015CEBCB250E8DD3000629A5 /* AnimalMemoryUITests.swift in Sources */,
 			);
