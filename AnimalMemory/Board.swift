@@ -10,10 +10,10 @@ import SwiftUI
 
 struct Board: View {
   let tiles = [
-    TileData(title: "A", color: .red, sound: "Cat2"),
-    TileData(title: "B", color: .purple, sound: "catfight"),
-    TileData(title: "C", color: .green, sound: "catgrowl"),
-    TileData(title: "D", color: .yellow, sound: "cathiss"),
+    TileData(title: "A", color: .red, sound: "cat"),
+    TileData(title: "B", color: .purple, sound: "dog"),
+    TileData(title: "C", color: .green, sound: "cow"),
+    TileData(title: "D", color: .yellow, sound: "horse"),
   ]
   
   var body: some View {
