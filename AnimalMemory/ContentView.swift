@@ -9,8 +9,23 @@
 import SwiftUI
 
 struct ContentView: View {
+  @EnvironmentObject var game: GameEngine
+
   var body: some View {
-    Board()
+    VStack {
+      HStack {
+        Button(action: { self.game.nextSequence() }) {
+          Text("Next")
+        }
+        Spacer()
+        Text("\(game.sequence.count)")
+        Spacer()
+        Button(action: { self.game.newGame() }) {
+          Text("Restart")
+        }
+      }.padding(10)
+      Board()
+    }
   }
 }
 
