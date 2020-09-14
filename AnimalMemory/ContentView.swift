@@ -20,6 +20,12 @@ struct ContentView: View {
         Spacer()
         Text("\(game.sequence.count)")
         Spacer()
+        if game.inputLocked {
+         Text("Locked")
+        } else {
+          Text("Unlocked")
+        }
+        Spacer()
         Button(action: { self.game.newGame() }) {
           Text("Restart")
         }

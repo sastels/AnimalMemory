@@ -17,9 +17,11 @@ struct Tile: View {
 
   var body: some View {
     Button(action: {
-      print("Pressed \(self.data.image)")
-      self.data.playSound()
-      self.game.CheckGuess(guess: self.data.title)
+      if !self.game.inputLocked {
+        print("Pressed \(self.data.image)")
+        self.data.playSound()
+        self.game.CheckGuess(guess: self.data.title)
+      }
     }) {
       Image(data.image).resizable().scaledToFit()
       .frame(minWidth: 0,
