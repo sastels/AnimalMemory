@@ -18,7 +18,7 @@ struct ContentView: View {
           Text("Next")
         }
         Spacer()
-        Text("\(game.sequenceLength)")
+        Text("\(game.sequence.count)")
         Spacer()
         Button(action: { self.game.newGame() }) {
           Text("Restart")
