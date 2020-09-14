@@ -10,6 +10,8 @@ import SwiftUI
 import AVFoundation
 
 struct Tile: View {
+  @EnvironmentObject var game: GameEngine
+
   var data: TileData
   @State private var audioPlayer: AVAudioPlayer?
 
@@ -17,6 +19,7 @@ struct Tile: View {
     Button(action: {
       print("Pressed \(self.data.image)")
       self.data.playSound()
+      self.game.CheckGuess(guess: self.data.title)
     }) {
       Image(data.image).resizable().scaledToFit()
       .frame(minWidth: 0,

@@ -13,9 +13,11 @@ class GameEngine: ObservableObject {
   @Published var tiles: [TileData]
   @Published var sequence: [Int]
   var audioPlayer: AVAudioPlayer?
+  var nextGuessIndex: Int
   
   init() {
     sequence = []
+    nextGuessIndex = 0
     tiles = [
       TileData(title: "A", color: .red, sound: "cat", image: "cat"),
       TileData(title: "B", color: .purple, sound: "dog", image: "dog"),
@@ -27,11 +29,13 @@ class GameEngine: ObservableObject {
 
    func newGame() {
     sequence = []
+    nextGuessIndex = 0
     nextSequence()
   }
 
    func nextSequence() {
     sequence.append(Int.random(in: 0..<4))
+    nextGuessIndex = 0
     playSequence()
     print("Next sequence: \(sequence)")
   }
@@ -45,6 +49,20 @@ class GameEngine: ObservableObject {
         audio?.play()
       }
       time += 0.1 + tiles[tileIndex].soundDuration!
+    }
+  }
+  
+  @discardableResult func CheckGuess(guess: String) -> Bool {
+    if tiles[sequence[nextGuessIndex]].title == guess {
+      nextGuessIndex += 1
+      if nextGuessIndex >= sequence.count {
+        nextSequence()
+      }
+      return true
+    } else {
+      print("Wrong!")
+      nextGuessIndex = 0
+      return false
     }
   }
 }
