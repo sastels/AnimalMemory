@@ -9,12 +9,18 @@
 import SwiftUI
 
 struct ContentView: View {
+  @EnvironmentObject var game: GameEngine
+
   var body: some View {
     VStack {
       HStack {
-        Text("Animal Memory")
+        Button(action: { self.game.nextSequence() }) {
+          Text("Next")
+        }
         Spacer()
-        Button(action: {}) {
+        Text("\(game.sequenceLength)")
+        Spacer()
+        Button(action: { self.game.newGame() }) {
           Text("Restart")
         }
       }.padding(10)

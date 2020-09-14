@@ -9,31 +9,38 @@
 import AVFoundation
 import Foundation
 
-struct GameEngine {
+class GameEngine: ObservableObject {
   var tiles: [TileData]
   var sequence: [Int]
+  var sequenceLength: Int
   var audioPlayer: AVAudioPlayer?
 
   init() {
-    sequence = [0, 1, 0, 0]
+    sequence = []
+    sequenceLength = 0
     tiles = [
       TileData(title: "A", color: .red, sound: "cat", image: "cat"),
       TileData(title: "B", color: .purple, sound: "dog", image: "dog"),
       TileData(title: "C", color: .green, sound: "cow", image: "cow"),
       TileData(title: "D", color: .yellow, sound: "horse", image: "horse"),
     ]
+    newGame()
   }
 
-  mutating func nowGame() {
+   func newGame() {
     sequence = []
+    sequenceLength = 0
+    nextSequence()
   }
 
-  mutating func NextSequence() {
+   func nextSequence() {
     sequence.append(Int.random(in: 0..<4))
+    sequenceLength += 1
+    playSequence()
     print("Next sequence: \(sequence)")
   }
 
-  mutating func playSequence() {
+   func playSequence() {
     var time = 0.0
 
     for tileIndex in sequence {
