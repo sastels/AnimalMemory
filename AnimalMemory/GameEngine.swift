@@ -44,7 +44,7 @@ class GameEngine: ObservableObject {
 
   func playSequence() {
     var time = 0.0
-  
+
     inputLocked = true
     for tileIndex in sequence {
       let audio = tiles[tileIndex].audioPlayer
@@ -62,7 +62,10 @@ class GameEngine: ObservableObject {
     if tiles[sequence[nextGuessIndex]].title == guess {
       nextGuessIndex += 1
       if nextGuessIndex >= sequence.count {
-        nextSequence()
+        let delay = tiles[sequence[nextGuessIndex-1]].soundDuration! + 1.0
+        Timer.scheduledTimer(withTimeInterval: delay, repeats: false) { _ in
+          self.nextSequence()
+        }
       }
       return true
     } else {
