@@ -11,6 +11,7 @@ import Foundation
 import SwiftUI
 
 struct TileData {
+  var isActive: Bool
   var title: String
   var color: Color
   var sound: String
@@ -19,6 +20,7 @@ struct TileData {
   var audioPlayer: AVAudioPlayer?
 
   init(title: String, color: Color, sound: String, image: String) {
+    isActive = false
     self.title = title
     self.color = color
     self.sound = sound
@@ -32,6 +34,10 @@ struct TileData {
     }
   }
 
+  mutating func toggleActive() {
+    isActive.toggle()
+  }
+  
   func playSound() {
     if let audioPlayer = audioPlayer {
       print("playing \(sound) Duration: \(soundDuration!)")
