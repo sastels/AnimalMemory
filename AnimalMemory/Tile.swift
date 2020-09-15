@@ -6,8 +6,8 @@
 //  Copyright © 2020 Steve Astels. All rights reserved.
 //
 
-import SwiftUI
 import AVFoundation
+import SwiftUI
 
 struct Tile: View {
   @EnvironmentObject var game: GameEngine
@@ -24,12 +24,14 @@ struct Tile: View {
       }
     }) {
       Image(data.image).resizable().scaledToFit()
-      .frame(minWidth: 0,
-             maxWidth: .infinity,
-             minHeight: 0,
-             maxHeight: .infinity,
-             alignment: .center)
-        .background(data.color)
+        .frame(minWidth: 0,
+               maxWidth: .infinity,
+               minHeight: 0,
+               maxHeight: .infinity,
+               alignment: .center)
+        .padding()
+        .overlay(RoundedRectangle(cornerRadius: 16).stroke(data.color, lineWidth: 8))
+//        .background(data.color)
     }.buttonStyle(PlainButtonStyle())
   }
 }
