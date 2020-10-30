@@ -27,6 +27,6 @@ struct Board: View {
 
 struct Board_Previews: PreviewProvider {
   static var previews: some View {
-    Board()
+    Board().environmentObject(GameEngine())
   }
 }
