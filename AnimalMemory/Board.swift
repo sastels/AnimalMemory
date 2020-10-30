@@ -11,26 +11,22 @@ import SwiftUI
 struct Board: View {
   @EnvironmentObject var game: GameEngine
 
-//  @State var game = GameEngine()
-
   var body: some View {
-    VStack {
-      HStack(spacing: 0) {
+    VStack(spacing: 10) {
+      HStack(spacing: 10) {
         Tile(data: game.tiles[0])
         Tile(data: game.tiles[1])
       }
-      HStack(spacing: 0) {
+      HStack(spacing: 10) {
         Tile(data: game.tiles[2])
         Tile(data: game.tiles[3])
       }
-    }.onAppear {
-//      self.game.playSequence()
-    }
+    }.padding()
   }
 }
 
 struct Board_Previews: PreviewProvider {
   static var previews: some View {
-    Board()
+    Board().environmentObject(GameEngine())
   }
 }
